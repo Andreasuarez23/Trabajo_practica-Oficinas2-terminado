@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./head.ejs') %>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <form action="/resultados_oficina" method="post">
+        <input type="text" name="keyword" placeholder="Buscar aquí">
+        <button type="submit" class="btn btn-success"> 
+            Buscar</button>
+    </form>
+</body>
+
+</html>

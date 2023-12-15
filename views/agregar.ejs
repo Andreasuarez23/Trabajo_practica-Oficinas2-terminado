@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./head.ejs') %>
+
+    <body>
+        <h1>Agregar persona</h1>
+        <form action="/agregar" method="post">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="email" name="email" placeholder="E-mail">
+            <label for="oficina">Oficina:</label>
+            <select id="oficina" name="oficina">
+                <% oficinas.forEach(oficina => { %>
+                    <option value="<%= oficina.id %>"><%= oficina.denominacion %></option>
+                <% }); %>
+            </select>            
+            <br>
+            <br>
+            <button class= "btn btn-success" type="submit">Agregar</button>
+            <a class= "btn btn-success" href="/personas"> Cancelar</a>
+        </form>
+    </body>
+
+</html>

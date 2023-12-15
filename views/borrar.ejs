@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('./head.ejs') %>
+
+    <body>
+        <h1>Confirma que desea eliminar ese registro?</h1>
+        <form action="/delete/<%= item.id %>" method="post">
+            <span><%= item.nombre %></span>
+            <br>
+            <br>
+            <button class= "btn btn-info" type="submit">Confirmar</button>
+            <a class= "btn btn-info" href="/personas"> Cancelar</a>
+        </form>
+
+    </body>
+
+</html>

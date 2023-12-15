@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+
+<%- include('./head.ejs') %>
+
+    <body>
+        <%- include('./navigation.ejs') %>
+            <h1>Lista de personas</h1>
+            <a class="btn btn-success" href="/agregar" role="button">Agregar</a>
+            <a class="btn btn-success" href="/buscar" role="button">Buscar</a>
+            
+            <div class="container">
+                <% personas.forEach(element => { %>
+                    <div class="row">
+                        <div class="col-md-3 mt-3">
+                            <%= element.nombre %>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                            <%= element.email %>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                            <%= element.nombre_oficina %>
+                        </div>
+                        <div class="col-md-3 mt-3">
+                            <a class="btn btn-success" href="/edit/<%= element.id %>" role="button">Editar</a>
+                            <a class="btn btn-success" href="/delete/<%= element.id %>" role="button">Borrar</a>
+                        </div>
+                        
+                    </div>
+                    <hr>
+                    <% }) %>
+
+            </div>
+            
+
+            <ul>
+
+            </ul>
+    </body>
+
+</html>
